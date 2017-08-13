@@ -59,7 +59,7 @@ function zsh_nothing () {
   echo '' # Nothing
 }
 
-# Functions: If working directory contains valid package.json, show nodejs information
+# Functions: If working directory contains package.json, show nodejs information
 function zsh_package_json () {
   local pkgjson=$(pwd)/package.json
   if [[ -f $pkgjson ]]; then
