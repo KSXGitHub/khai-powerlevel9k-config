@@ -66,16 +66,16 @@ function zsh_package_json () {
     local nodever npmver pkgver
 
     if [[ $POWERLEVEL9K_CUSTOM_PACKAGE_JSON_NODEVER != 'false' ]]; then
-      nodever=$POWERLEVEL9K_NODE_ICON' '$(node --version)
+      nodever=($POWERLEVEL9K_NODE_ICON $(node --version))
     fi
 
     if [[ $POWERLEVEL9K_CUSTOM_PACKAGE_JSON_NPMVER != 'false' ]]; then
-      npmver=$POWERLEVEL9K_NPM_ICON' '$(npm --version)
+      npmver=($POWERLEVEL9K_NPM_ICON' '$(npm --version))
     fi
 
     if [[ $POWERLEVEL9K_CUSTOM_PACKAGE_JSON_PKGVER != 'false' ]]; then
       local actualpkgver=$(node -p "require('$pkgjson').version || ''")
-      [[ -z $actualpkgver ]] || pkgver=$POWERLEVEL9K_PACKAGE_ICON' '$actualpkgver
+      [[ -z $actualpkgver ]] || pkgver=($POWERLEVEL9K_PACKAGE_ICON $actualpkgver)
     fi
 
     env echo -n $nodever $npmver $pkgver
