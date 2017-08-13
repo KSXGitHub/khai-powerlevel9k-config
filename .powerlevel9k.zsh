@@ -55,29 +55,14 @@ export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
 export POWERLEVEL9K_CUSTOM_NOTHING=zsh_nothing
 export POWERLEVEL9K_CUSTOM_PACKAGE_JSON=zsh_package_json
 
+local sourcedfile=$(realpath ${(%):-%x})
+local sourcedfilecontainer=$(dirname $sourcedfile)
+
 function zsh_nothing () {
   echo '' # Nothing
 }
 
 # Functions: If working directory contains package.json, show nodejs information
 function zsh_package_json () {
-  local pkgjson=$(pwd)/package.json
-  if [[ -f $pkgjson ]]; then
-    local nodever npmver pkgver
-
-    if [[ $POWERLEVEL9K_CUSTOM_PACKAGE_JSON_NODEVER != 'false' ]]; then
-      nodever=($POWERLEVEL9K_NODE_ICON $(node --version))
-    fi
-
-    if [[ $POWERLEVEL9K_CUSTOM_PACKAGE_JSON_NPMVER != 'false' ]]; then
-      npmver=($POWERLEVEL9K_NPM_ICON' '$(npm --version))
-    fi
-
-    if [[ $POWERLEVEL9K_CUSTOM_PACKAGE_JSON_PKGVER != 'false' ]]; then
-      local actualpkgver=$(node -p "require('$pkgjson').version || ''")
-      [[ -z $actualpkgver ]] || pkgver=($POWERLEVEL9K_PACKAGE_ICON $actualpkgver)
-    fi
-
-    env echo -n $nodever $npmver $pkgver
-  fi
+  $sourcedfilecontainer/lib/zsh-package-json.js 2> /dev/null
 }
