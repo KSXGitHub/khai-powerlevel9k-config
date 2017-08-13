@@ -43,8 +43,13 @@ export POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=''
 export POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX=' (zsh) '$POWERLEVEL9K_TERMINAL_ICON' '
 
 # Prompt segments
-export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context ssh dir dir_writable rbenv vcs custom_nothing custom_package_json)
-export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs battery ip time command_execution_time)
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+  os_icon context ssh dir dir_writable rbenv vcs
+  custom_nothing custom_package_json
+)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+  status root_indicator background_jobs battery ip time command_execution_time
+)
 
 # Custom segments
 export POWERLEVEL9K_CUSTOM_NOTHING=zsh_nothing
