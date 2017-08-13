@@ -74,7 +74,8 @@ function zsh_package_json () {
     fi
 
     if [[ $POWERLEVEL9K_CUSTOM_PACKAGE_JSON_PKGVER != 'false' ]]; then
-      pkgver=$POWERLEVEL9K_PACKAGE_ICON' '$(node -p "require('$pkgjson').version")
+      local actualpkgver=$(node -p "require('$pkgjson').version || ''")
+      [[ -z $actualpkgver ]] || pkgver=$POWERLEVEL9K_PACKAGE_ICON' '$actualpkgver
     fi
 
     env echo -n $nodever $npmver $pkgver
