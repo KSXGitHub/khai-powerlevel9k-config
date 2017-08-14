@@ -25,6 +25,11 @@ It does literally nothing.
 
 When file `package.json` is present, show node/npm/package versions/icons
 
+#### Requirements
+
+* Node.js ≥ 7.0.0
+* NPM (optional)
+
 #### Example
 
 ![Preview for `custom_package_json`](./img/preview-package-json.png)
