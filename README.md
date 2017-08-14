@@ -7,7 +7,8 @@
 ## Requirements
 
 * Shell: [ZSH](http://www.zsh.org/)
-* ZSH Theme: [Powerline](https://github.com/powerline/powerline)
+* ZSH Plugin: [Powerline](https://github.com/powerline/powerline)
+* ZSH Theme: [Powerlevel9k](https://github.com/bhilburn/powerlevel9k.git)
 * Terminal Fonts: [Powerline Nerd Fonts](http://nerdfonts.com/)
 
 ## Installation
