@@ -34,7 +34,7 @@ When file `package.json` is present, show node/npm/package versions/icons
 **Enable/Disable:** Their values are `true`, `false` or in version format (`x.y.z`, e.g. `1.2.3`). If `true`, execute to get version number (might be slow in case of npm); If `false`, skip it; If matches version format, show variable's value without execution (might be useful to show npm version without waiting to execute `npm --version`)
 
 * `POWERLEVEL9K_CUSTOM_PACKAGE_JSON_NODEVER`
-* `POWERLEVEL9K_CUSTOM_PACKAGE_JSON_NPNVER`
+* `POWERLEVEL9K_CUSTOM_PACKAGE_JSON_NPMVER`
 * `POWERLEVEL9K_CUSTOM_PACKAGE_JSON_PACKAGEVER`
 
 **Icons:** Specify icons (e.g. ``, ``, ``), set to empty (`''`) to hide them
