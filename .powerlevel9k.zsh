@@ -1,4 +1,7 @@
 
+# Define mode
+export POWERLEVEL9K_MODE='nerdfont-complete'
+
 # Define some icons (Font Awesome)
 export POWERLEVEL9K_FOLDER_ICON=$'\uF115'
 export POWERLEVEL9K_HOME_ICON=$'\uF015'
