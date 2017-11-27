@@ -63,7 +63,6 @@ export POWERLEVEL9K_CUSTOM_PACKAGE_JSON_CHECK_PARENT=0
 # Prompt segments
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   os_icon context ssh dir dir_writable rbenv vcs
-  custom_nothing custom_package_json
 )
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
   status root_indicator background_jobs battery ip time command_execution_time
