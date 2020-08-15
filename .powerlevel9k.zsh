@@ -64,7 +64,7 @@ export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
   os_icon context ssh dir dir_writable rbenv vcs
 )
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-  status root_indicator background_jobs battery ip time command_execution_time
+  status root_indicator background_jobs ip time command_execution_time
 )
 
 # Custom segments
